@@ -11,7 +11,8 @@ The video series will have 4 parts:
 --------------------------------------------------------------------------------------------------------------------------------------------------------
 PART - 1
 
-1.Initialization and data pre-processing
+Initialization and data pre-processing
+
 Note: Assuming basic knowledge of tensorflow and python programming
 	1. Installing and activating virtual environment
 
@@ -23,34 +24,34 @@ Note: Assuming basic knowledge of tensorflow and python programming
 			* py -m venv chbot
                		(env - name of your environment)
 
-	1. Activating virtual environment
+		* Activating virtual environment
 
-		* .\env\Scripts\activate   --> going to scripts directory in env and activating it
-	2. Deactivating virtual environment
+			* .\env\Scripts\activate   --> going to scripts directory in env and activating it
+		* Deactivating virtual environment
 
-		* .\env\Scripts\deactivate
-	3. installing dependencies like tensorflow, nltk, numpy etc. using "pip install" in the virtual environment
-	4. Create an intents.json to hold all intents, user-query and response for our bot to be trained on
-	5. data pre-processing using pandas and tokenizer
+			* .\env\Scripts\deactivate
+	2. installing dependencies like tensorflow, nltk, numpy etc. using "pip install" in the virtual environment
+	3. Create an intents.json to hold all intents, user-query and response for our bot to be trained on
+	4. data pre-processing using pandas and tokenizer
 
 		* getting tags and (tag, user-query) from intents
 		* forming a data frame using of (tag, user-query) to extract training data
 		* removing stop words
-
 			* (i, you, is, the, etc.)
+			
 		* stemming the words
-
 			* (playing, plays, played) -> play
+			
 		* using stemmed words and tags combination to make training sets
 		* one-hot encoding tags as we are using softmax activation function
 		* Using tokenizer to get text converted into sequence of equal length, getting max length of sequence and vocab size.
-	6. training the data on stemmed sentences and intents using tensorflow
-	7. saving model, tokenizer and max_sequence length variable
+	5. training the data on stemmed sentences and intents using tensorflow
+	6. saving model, tokenizer and max_sequence length variable
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------
 PART - 2
 
-2.Creating the Chatbot 
+Creating the Chatbot 
 	* We want to take input from user and use trained model to predict the proper response for it. 
 
 
@@ -64,7 +65,8 @@ PART - 2
 --------------------------------------------------------------------------------------------------------------------------------------------------------
 PART - 3
 
-3.using Twilio and flask to chat with bot
+Using Twilio and flask to chat with bot
+
 	1. Creating twilio account to get Whatsapp API
 	2. Install flask 
 	3. Define an app using flask and inbuilt twilio API and run it 
@@ -83,7 +85,7 @@ PART - 3
 --------------------------------------------------------------------------------------------------------------------------------------------------------
 PART - 4
 
-4.Deploying the application on heroku
+Deploying the application on heroku
 	1. Download and install git
 
 		* https://git-scm.com/downloads 
